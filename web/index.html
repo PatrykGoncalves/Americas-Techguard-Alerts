@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Americas TechGuard
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+<body>
+
+<div id="clock"></div>
+
+<div id="notification" class="notification hidden">
+
+    <div class="notification-title">
+
+        ⚠️ Environmental Alert
+
+    </div>
+
+    <div id="notification-text">
+
+        New environmental alert received.
+
+    </div>
+
+</div>
+
+<div class="phone">
+
+    <header>
+
+        <h1>
+            🌎 Americas TechGuard
+        </h1>
+
+        <p>
+            Environmental Alert System
+        </p>
+
+    </header>
+
+    <section id="system-status">
+
+        <div id="status-indicator"></div>
+
+        <span id="status-text">
+
+            Loading...
+
+        </span>
+
+    </section>
+
+    <section id="status-card" class="card">
+
+        <span class="badge" id="risk-level"></span>
+
+        <p id="alert-message"></p>
+
+        <hr>
+
+        <strong>Prediction</strong>
+
+        <p id="prediction"></p>
+
+        <hr>
+
+        <strong>Recommended Action</strong>
+
+        <p id="recommended-action"></p>
+
+    </section>
+
+    <section class="card">
+
+        <h2>
+
+            🌊 Current Reading
+
+        </h2>
+
+        <div class="row">
+
+            <span>Observed Variable</span>
+
+            <span
+                id="sensor-type">
+
+                --
+
+            </span>
+
+        </div>
+
+        <div class="row">
+
+            <span>Measured Value</span>
+
+            <span
+                id="sensor-value">
+
+                --
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>
+
+            📍 Location
+
+        </h2>
+
+        <p
+            id="node-name">
+
+            --
+
+        </p>
+
+        <p
+            id="coordinates">
+
+            --
+
+        </p>
+
+    </section>
+
+    <section class="card">
+
+        <h2>
+
+            🕒 Timestamp
+
+        </h2>
+
+        <p
+            id="timestamp">
+
+            --
+
+        </p>
+
+        <p id="last-update"></p>
+
+        <p
+            id="source">
+
+            --
+
+        </p>
+
+    </section>
+
+    <section
+        class="buttons">
+
+        <button
+            id="map-button">
+
+            📍 Open Map
+
+        </button>
+
+        <button
+            id="refresh-button">
+
+            🔄 Refresh
+
+        </button>
+
+    </section>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

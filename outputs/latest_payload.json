@@ -1,0 +1,22 @@
+{
+    "device_id": "ATG_NODE_001",
+    "node_name": "Rio Teste",
+    "timestamp": "2026-07-31T18:02:42.434139+00:00",
+    "location": {
+        "latitude": -26.9186,
+        "longitude": -49.0661,
+        "altitude": 15.0
+    },
+    "sensor": {
+        "sensor_type": "water_level",
+        "sensor_value": 2.12,
+        "unit": "m"
+    },
+    "risk": {
+        "risk_level": "ALERT",
+        "alert_message": "Flood risk detected. Prepare response.",
+        "prediction_horizon": "Next 2 hours",
+        "recommended_action": "Notify local authorities and prepare response teams."
+    },
+    "source": "simulation"
+}

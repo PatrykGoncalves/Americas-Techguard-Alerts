@@ -1,0 +1,478 @@
+/* ============================================================
+   Americas TechGuard
+   Environmental Alert System
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: #edf2f7;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 30px;
+}
+
+
+/* ============================================================
+   Smartphone
+   ============================================================ */
+
+.phone {
+
+    width: 390px;
+
+    min-height: 760px;
+
+    background: white;
+
+    border-radius: 32px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.18);
+
+    border: 1px solid #d8d8d8;
+
+}
+
+
+/* ============================================================
+   Header
+   ============================================================ */
+
+header {
+
+    background: #005b96;
+
+    color: white;
+
+    padding: 28px;
+
+}
+
+header h1 {
+
+    font-size: 1.55rem;
+
+    margin-bottom: 6px;
+
+}
+
+header p {
+
+    opacity: .85;
+
+    font-size: .95rem;
+
+}
+
+
+/* ============================================================
+   Cards
+   ============================================================ */
+
+.card {
+
+    background: white;
+
+    margin: 18px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.card h2 {
+
+    color: #005b96;
+
+    font-size: 1rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ============================================================
+   Badge de Risco
+   ============================================================ */
+
+.badge {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: .95rem;
+
+}
+
+
+/* cores padrão */
+
+.safe {
+
+    background: #2e7d32;
+
+}
+
+.attention {
+
+    background: #f9a825;
+
+}
+
+.alert {
+
+    background: #ef6c00;
+
+}
+
+.critical {
+
+    background: #c62828;
+
+}
+
+
+/* ============================================================
+   Texto do Alerta
+   ============================================================ */
+
+#alert-message {
+
+    margin-top: 18px;
+
+    line-height: 1.5;
+
+    color: #333;
+
+}
+
+
+/* ============================================================
+   Linhas
+   ============================================================ */
+
+.row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 10px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    padding-bottom: 10px;
+
+}
+
+.row span:first-child {
+
+    color: #666;
+
+}
+
+.row span:last-child {
+
+    font-weight: 600;
+
+}
+
+
+/* ============================================================
+   Informações
+   ============================================================ */
+
+#node-name {
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+
+}
+
+#coordinates,
+#timestamp,
+#source {
+
+    color: #666;
+
+    font-size: .92rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* ============================================================
+   Botões
+   ============================================================ */
+
+.buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    padding: 18px;
+
+}
+
+button {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: .95rem;
+
+    transition: .25s;
+
+}
+
+#map-button {
+
+    background: #1565c0;
+
+}
+
+#refresh-button {
+
+    background: #43a047;
+
+}
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    opacity: .92;
+
+}
+
+
+/* ============================================================
+   Responsividade
+   ============================================================ */
+
+@media (max-width: 500px) {
+
+    body {
+
+        padding: 0;
+
+        background: white;
+
+    }
+
+    .phone {
+
+        width: 100%;
+
+        min-height: 100vh;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        border: none;
+
+    }
+
+}
+
+/* ============================================================
+   System Status
+   ============================================================ */
+
+#system-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 20px;
+
+    background: #f7f9fb;
+
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+#status-indicator {
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #999;
+
+}
+
+.online {
+
+    background: #2e7d32 !important;
+
+}
+
+.offline {
+
+    background: #c62828 !important;
+
+}
+
+#status-text {
+
+    font-size: .9rem;
+
+    color: #555;
+
+}
+
+/* ============================================================
+   Notification Banner
+   ============================================================ */
+
+.notification {
+
+    position: fixed;
+
+    top: 15px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 360px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 16px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+
+    z-index: 9999;
+
+    transition: all .35s ease;
+
+}
+
+.notification-title {
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #c62828;
+
+}
+
+.hidden {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform: translate(-50%, -30px);
+
+}
+
+.show {
+
+    opacity: 1;
+
+    transform: translate(-50%, 0);
+
+}
+
+@keyframes pulse {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.02);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+.highlight {
+
+    animation: pulse .6s ease-in-out;
+
+}
+
+strong{
+
+    color:#005b96;
+
+    display:block;
+
+    margin-top:10px;
+
+}
+
+#prediction,
+#recommended-action{
+
+    margin-top:4px;
+
+    margin-bottom:8px;
+
+    color:#333;
+
+    line-height:1.4;
+
+}
