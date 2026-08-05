@@ -681,7 +681,7 @@ Para executar a aplicação é necessário possuir os seguintes componentes inst
 Clone o repositório utilizando Git.
 
 ```bash
-git clone https://github.com/PatrykGoncalves/AmericasTechGuardAlerts.git
+git clone https://github.com/PatrykGoncalves/Americas-Techguard-Alerts.git
 ```
 
 Acesse o diretório do projeto.
